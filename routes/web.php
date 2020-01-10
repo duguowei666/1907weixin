@@ -18,7 +18,8 @@ Route::get('/', function () {
 Route::any('/wx/link','WeiXin\WxController@index');
 //字定义菜单
 Route::get('/wx/create_menu','WeiXin\WxController@createMenu');
-Route::get('/wx/access_token','WeiXin\WxController@AccessToken');       //刷新access_token
+Route::get('/wx/create_menu','WeiXin\WxController@createMenu');         //刷新access_token
+Route::get('/wx/sendMsg','WeiXin\WxController@sendMsg');       //微信群发
 
 //后台登陆
 Route::get('/admin/login','Admin\LoginController@login');

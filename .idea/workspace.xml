@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54984ffd-e81c-47d5-afac-389537afc643" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WeiXin/WxController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WeiXin/WxController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,21 +17,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="20" column="88" lean-forward="false" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
+            <state relative-caret-position="204">
+              <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WxController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WxController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeiXin/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="195" column="10" lean-forward="true" selection-start-line="195" selection-start-column="10" selection-end-line="195" selection-end-column="10" />
+            <state relative-caret-position="517">
+              <caret line="211" column="28" lean-forward="false" selection-start-line="211" selection-start-column="27" selection-end-line="211" selection-end-column="28" />
               <folding>
                 <element signature="e#47#83#0#PHP" expanded="true" />
                 <element signature="e#433#530#0#PHP" expanded="false" />
@@ -40,7 +41,8 @@
                 <element signature="e#5701#6746#0#PHP" expanded="false" />
                 <element signature="e#6763#7019#0#PHP" expanded="false" />
                 <element signature="e#7035#7378#0#PHP" expanded="false" />
-                <element signature="e#7702#8353#0#PHP" expanded="false" />
+                <element signature="e#7394#7676#0#PHP" expanded="false" />
+                <element signature="e#8330#8981#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -96,9 +98,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/wechat.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" />
         <option value="$PROJECT_DIR$/app/Tools/WeiXin.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/WeiXin/WxController.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/WeiXin/WxController.php" />
       </list>
     </option>
   </component>
@@ -192,6 +194,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Tools" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1907laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1907laravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -423,12 +443,12 @@
       <workItem from="1578444537885" duration="21819000" />
       <workItem from="1578530046505" duration="4009000" />
       <workItem from="1578565907031" duration="3422000" />
-      <workItem from="1578623975031" duration="7652000" />
+      <workItem from="1578623975031" duration="9729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129662000" />
+    <option name="totallyTimeSpent" value="131739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -820,24 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeiXin/WxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="195" column="10" lean-forward="true" selection-start-line="195" selection-start-column="10" selection-end-line="195" selection-end-column="10" />
-          <folding>
-            <element signature="e#47#83#0#PHP" expanded="true" />
-            <element signature="e#433#530#0#PHP" expanded="false" />
-            <element signature="e#973#2213#0#PHP" expanded="false" />
-            <element signature="e#2222#2746#0#PHP" expanded="false" />
-            <element signature="e#2755#5259#0#PHP" expanded="false" />
-            <element signature="e#5701#6746#0#PHP" expanded="false" />
-            <element signature="e#6763#7019#0#PHP" expanded="false" />
-            <element signature="e#7035#7378#0#PHP" expanded="false" />
-            <element signature="e#7702#8353#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -848,9 +850,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="20" column="88" lean-forward="false" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
+        <state relative-caret-position="204">
+          <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeiXin/WxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="211" column="28" lean-forward="false" selection-start-line="211" selection-start-column="27" selection-end-line="211" selection-end-column="28" />
+          <folding>
+            <element signature="e#47#83#0#PHP" expanded="true" />
+            <element signature="e#433#530#0#PHP" expanded="false" />
+            <element signature="e#973#2213#0#PHP" expanded="false" />
+            <element signature="e#2222#2746#0#PHP" expanded="false" />
+            <element signature="e#2755#5259#0#PHP" expanded="false" />
+            <element signature="e#5701#6746#0#PHP" expanded="false" />
+            <element signature="e#6763#7019#0#PHP" expanded="false" />
+            <element signature="e#7035#7378#0#PHP" expanded="false" />
+            <element signature="e#7394#7676#0#PHP" expanded="false" />
+            <element signature="e#8330#8981#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

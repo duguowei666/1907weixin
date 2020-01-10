@@ -200,6 +200,24 @@ class WxController extends Controller
         $res = file_put_contents('voice',$voice);
         var_dump($voice);
     }
+
+    //微信群发
+    public function sendMsg(){
+        $data = CuserModel::all()->toArray();
+        $openid_list = array_column($data,'openid');
+        $msg = date('Y-m-d H:i:s').'hello world';
+        $json_data = [
+          'touser'      => $openid_list,
+            'msgtype'   => 'text',
+            'text'      => [
+                'content'   => $msg
+            ]
+        ];
+        $json_data = json_encode($json_data,JSON_UNESCAPED_UNICODE);
+        $url = 'https://api.weixin.qq.com/cgi-bin/message/mass/send?access_token='.$this->access_token;
+        $res = Curl::Post($url,$json_data);
+        var_dump($res);
+    }
     //刷新access_token
     public function AccessToken(){
         $access_token = Cache::get('access_token');
