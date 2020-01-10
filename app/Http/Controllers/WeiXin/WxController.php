@@ -216,19 +216,22 @@ class WxController extends Controller
         $json_data = json_encode($json_data,JSON_UNESCAPED_UNICODE);
         $url = 'https://api.weixin.qq.com/cgi-bin/message/mass/send?access_token='.$this->access_token;
         $res = Curl::Post($url,$json_data);
-        var_dump($res);
+        $res = json_decode($res,true);
+
+        if($res['errcode']>0){
+            echo '错误信息：'. $res['errmsg'];
+        }else{
+            echo '成功';
+        }
     }
     //刷新access_token
     public function AccessToken(){
-        $access_token = Cache::get('access_token');
-        if(empty($access_token)){      //如果为access_token为空  获取access_token
-            //获取access_token微信接口调用凭证
-            $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.Self::appid.'&secret='.Self::secret;
+        $appid = 'wxc59861663d03edd7';
+        $secret = '4467a4f0dcd161b26e8f921f049c5434';
+            $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$appid.'&secret='.$secret;
             $data = file_get_contents($url);        //发送请求
             $data = json_decode($data,true);
             $access_token = $data['access_token'];      //获取access_token
-            Cache::put('access_token',$access_token,7200);      //存两个小时
-        }
         return $access_token;       //如果为access_token有值返回
     }
 }
