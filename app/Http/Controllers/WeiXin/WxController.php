@@ -244,7 +244,8 @@ class WxController extends Controller
 
         //实现签到功能
         $redis_key = 'checkin'.date('Y-m-d');
-        echo $redis_key;die;
+        Redis::Zadd($redis_key,time(),$arr1['openid']);     //将openid加入有序集合
+        echo $arr1['nickname'].'签到成功'.date('Y-m-d H:i:s');
     }
     //刷新access_token
     public function AccessToken(){
