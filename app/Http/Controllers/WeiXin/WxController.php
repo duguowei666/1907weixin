@@ -223,15 +223,18 @@ class WxController extends Controller
     }
     //网页授权
     public function test(){
-        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.env('APPID').'&redirect_uri='.env('REDIRECT_URI').'&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect ';
+        $redirect_url = urlencode(env('REDIRECT_URI'));
+        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.env('APPID').'&redirect_uri='.$redirect_url.'&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect ';
         echo $url;
     }
     //接收网页授权code
     public function auth(){
         //接收code
         $code = $_GET['code'];
+        echo $code;die;
         //根据code获取access_token
         $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('APPID').'&secret='.env('APPSEC').'&code='.$code.'&grant_type=authorization_code';
+        echo $url;die;
         $json_data = file_get_contents($url);
         $arr = json_decode($json_data,true);
         print_r($arr);die;
