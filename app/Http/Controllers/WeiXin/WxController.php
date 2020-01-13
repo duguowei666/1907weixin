@@ -253,8 +253,14 @@ class WxController extends Controller
         echo $arr1['nickname'].'签到成功'.date('Y-m-d H:i:s');
         echo '<br>';
         $user_list = Redis::zrange($redis_key,0,-1);
-        echo '<hr>';
-        print_r($user_list);
+        foreach ($user_list as $k => $v){
+            $key = 'h:userInfo:'.$v;
+            $u = Redis::hGetAll($key);
+            if(empty($u)){
+                continue;
+            }
+            print_r($u);
+        }
     }
     //刷新access_token
     public function AccessToken(){
