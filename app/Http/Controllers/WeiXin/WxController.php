@@ -259,7 +259,7 @@ class WxController extends Controller
             if(empty($u)){
                 continue;
             }
-            print_r($u);
+        echo "<img src='".$u['headimgurl']."'>";
         }
     }
     //刷新access_token
