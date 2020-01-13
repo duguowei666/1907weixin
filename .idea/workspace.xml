@@ -17,8 +17,8 @@
       <file leaf-file-name="WxController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeiXin/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="247" column="58" lean-forward="false" selection-start-line="247" selection-start-column="58" selection-end-line="247" selection-end-column="58" />
+            <state relative-caret-position="500">
+              <caret line="256" column="28" lean-forward="false" selection-start-line="256" selection-start-column="28" selection-end-line="256" selection-end-column="28" />
               <folding>
                 <element signature="e#47#83#0#PHP" expanded="true" />
                 <element signature="e#433#530#0#PHP" expanded="false" />
@@ -31,7 +31,7 @@
                 <element signature="e#7593#7875#0#PHP" expanded="false" />
                 <element signature="e#7891#8639#0#PHP" expanded="false" />
                 <element signature="e#8655#8953#0#PHP" expanded="false" />
-                <element signature="e#9824#10312#0#PHP" expanded="false" />
+                <element signature="e#10076#10564#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -345,7 +345,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145036000" />
+    <option name="totallyTimeSpent" value="145459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -721,8 +721,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeiXin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="247" column="58" lean-forward="false" selection-start-line="247" selection-start-column="58" selection-end-line="247" selection-end-column="58" />
+        <state relative-caret-position="500">
+          <caret line="256" column="28" lean-forward="false" selection-start-line="256" selection-start-column="28" selection-end-line="256" selection-end-column="28" />
           <folding>
             <element signature="e#47#83#0#PHP" expanded="true" />
             <element signature="e#433#530#0#PHP" expanded="false" />
@@ -735,7 +735,7 @@
             <element signature="e#7593#7875#0#PHP" expanded="false" />
             <element signature="e#7891#8639#0#PHP" expanded="false" />
             <element signature="e#8655#8953#0#PHP" expanded="false" />
-            <element signature="e#9824#10312#0#PHP" expanded="false" />
+            <element signature="e#10076#10564#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -241,11 +241,20 @@ class WxController extends Controller
         $jsonInfo = file_get_contents($url);
         $arr1 = json_decode($jsonInfo,true);
         print_r($arr1);
+        echo '<br>';
+
+        //将用户信息存入reids哈希中
+        $key = 'h:userInfo:'.$arr1['openid'];
+        Redis::hMset($key,$arr1);
 
         //实现签到功能
         $redis_key = 'checkin'.date('Y-m-d');
         Redis::Zadd($redis_key,time(),$arr1['openid']);     //将openid加入有序集合
         echo $arr1['nickname'].'签到成功'.date('Y-m-d H:i:s');
+        echo '<br>';
+        $user_list = Redis::zrange($redis_key,0,-1);
+        echo '<hr>';
+        print_r($user_list);
     }
     //刷新access_token
     public function AccessToken(){
