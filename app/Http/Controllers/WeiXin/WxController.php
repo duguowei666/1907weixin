@@ -238,6 +238,7 @@ class WxController extends Controller
 
         //获取用户信息
         $url = ' https://api.weixin.qq.com/sns/userinfo?access_token='.$arr['access_token'].'&openid='.$arr['openid'].'&lang=zh_CN';
+        echo $url;die;
         $jsonInfo = file_get_contents($url);
         $arr1 = json_decode($jsonInfo,true);
         print_r($arr1);
