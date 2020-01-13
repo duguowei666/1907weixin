@@ -151,9 +151,9 @@ class WxController extends Controller
         $menu = [
             "button"    =>  [
                 [
-                    'type'  => 'click',
-                    'name'  => 'aaa',
-                    'key'   => '1907',
+                    'type'  => 'view',
+                    'name'  => '签到',
+                    'url'   => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxc59861663d03edd7&redirect_uri=http%3A%2F%2F1905duguowei.comcto.com%2Fwx%2Fauth&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect',
                 ],
                 [
                     'type'  => 'view',
@@ -241,6 +241,10 @@ class WxController extends Controller
         $jsonInfo = file_get_contents($url);
         $arr1 = json_decode($jsonInfo,true);
         print_r($arr1);
+
+        //实现签到功能
+        $redis_key = 'checkin'.date('Y-m-d');
+        echo $redis_key;die;
     }
     //刷新access_token
     public function AccessToken(){
