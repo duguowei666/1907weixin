@@ -20,6 +20,9 @@ Route::any('/wx/link','WeiXin\WxController@index');
 Route::get('/wx/create_menu','WeiXin\WxController@createMenu');
 Route::get('/wx/access_token','WeiXin\WxController@AccessToken');         //刷新access_token
 Route::get('/wx/sendMsg','WeiXin\WxController@sendMsg');       //微信群发
+//网页授权
+Route::get('/wx/test','WeiXin\WxController@test');      //获取code
+Route::get('/wx/auth','WeiXin\WxController@auth');      //接收网页授权code
 
 //后台登陆
 Route::get('/admin/login','Admin\LoginController@login');

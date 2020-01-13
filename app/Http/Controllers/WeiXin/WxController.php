@@ -21,7 +21,6 @@ class WxController extends Controller
     {
         $this->access_token = WeiXin::getAccessToken();
     }
-
     public function index()
     {
         $echostr = \request()->echostr;
@@ -177,7 +176,6 @@ class WxController extends Controller
         $res = Curl::Post($url,$menu);
         var_dump($res);
     }
-
     //下载图片
     protected function getImg($media_id){
         $url = 'https://api.weixin.qq.com/cgi-bin/media/get?access_token='.$this->access_token.'&media_id='.$media_id;
@@ -200,7 +198,6 @@ class WxController extends Controller
         $res = file_put_contents('voice',$voice);
         var_dump($voice);
     }
-
     //微信群发
     public function sendMsg(){
         $data = CuserModel::all()->toArray();
@@ -223,6 +220,21 @@ class WxController extends Controller
         }else{
             echo '成功';
         }
+    }
+    //网页授权
+    public function test(){
+        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.env('APPID').'&redirect_uri='.env('REDIRECT_URI').'&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect ';
+        echo $url;
+    }
+    //接收网页授权code
+    public function auth(){
+        //接收code
+        $code = $_GET['code'];
+        //根据code获取access_token
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('APPID').'&secret='.env('APPSEC').'&code='.$code.'&grant_type=authorization_code';
+        $json_data = file_get_contents($url);
+        $arr = json_decode($json_data,true);
+        print_r($arr);die;
     }
     //刷新access_token
     public function AccessToken(){
