@@ -24,7 +24,6 @@ class WxController extends Controller
     public function index()
     {
         $echostr = \request()->echostr;
-        echo $echostr;die;
         if (!empty($echostr)) {
             echo $echostr;
         }
