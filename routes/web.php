@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('info',function(){
+    phpinfo();
+});
+
 Route::any('/wx/link','WeiXin\WxController@index');
 //字定义菜单
 Route::get('/wx/create_menu','WeiXin\WxController@createMenu');
