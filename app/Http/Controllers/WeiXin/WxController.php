@@ -24,13 +24,13 @@ class WxController extends Controller
     public function index()
     {
         $echostr = \request()->echostr;
+        echo $echostr;die;
         if (!empty($echostr)) {
             echo $echostr;
         }
 
         //接入后 微信服务器接以POST形式接收xml数据，发送到配置得url路径
         $xml = file_get_contents("php://input");
-
         //写入文件
         $res = file_put_contents("log.txt",".\n.". $xml."\n", FILE_APPEND);    //FILE_APPEND 在日志后面追加写
         //方便处理 把xml数据转化为对象
