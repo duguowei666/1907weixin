@@ -146,6 +146,7 @@ class WxController extends Controller
     }
     //创建字定义菜单
     public function createMenu(){
+        //获取token
         $access_token = WeiXin::getAccessToken();
         $url = 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$access_token;
         $menu = [
