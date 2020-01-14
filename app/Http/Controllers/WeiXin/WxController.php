@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\WeiXin;
 
 use App\Http\Controllers\Controller;
+use App\Model\MediaModel;
 use App\Model\XinWenModel;
 use App\Tools\Curl;
 use Illuminate\Http\Request;
@@ -188,7 +189,7 @@ class WxController extends Controller
         $url = 'https://api.weixin.qq.com/cgi-bin/media/get?access_token='.$this->access_token.'&media_id='.$media_id;
         $video = file_get_contents($url);
         $file_name = date('YmdHis').rand(1111,9999).'.mp4';
-        $res = file_put_contents($file_name,$video);
+        $res = file_put_contents('video',$file_name,$video);
         var_dump($res);
     }
     //下载语音
