@@ -204,7 +204,7 @@ class WxController extends Controller
         $openid_list = array_column($data,'openid');
         $msg = date('Y-m-d H:i:s').'hello world';
         $json_data = [
-          'touser'      => $openid_list,
+            'touser'      => $openid_list,
             'msgtype'   => 'text',
             'text'      => [
                 'content'   => $msg
